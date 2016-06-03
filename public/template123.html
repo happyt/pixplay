@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
+
+</head>
+<body>
+    <div id="p1">
+       <div class="fillscreen">        
+            <div class="top-row">
+                <img class="thirds" src="./images/squares1.png" alt>
+                <img class="thirds" src="./images/squares2.png" alt>
+                <img class="thirds" src="./images/squares3.png" alt>
+            </div>
+            <div class="lower-row">
+                <img class="halves" src="./images/squares6.png" alt>
+                <img class="halves" src="./images/squares7.png" alt>
+            </div>
+        </div>
+    </div>
+    <div id="p2"> 
+        <div class="fillscreen">        
+            <div class="top-row">
+                <img class="thirds" src="./images/2.jpg" alt>
+                <img class="thirds" src="./images/4.jpg" alt>
+                <img class="thirds" src="./images/1.jpg" alt>
+            </div>
+            <div class="lower-row">
+                <img class="halves" src="./images/6.jpg" alt>
+                <img class="halves" src="./images/7.jpg" alt>
+            </div>
+        </div>
+    </div>
+    <div id="p3">
+        <div class="fillscreen">        
+            <div class="top-row">
+                <img class="thirds" src="./images/circle2.png" alt>
+                <img class="thirds" src="./images/circle5.jpg" alt>
+                <img class="thirds" src="./images/circle3.png" alt>
+            </div>
+        <div class="lower-row">
+            <img class="halves" src="./images/circle4.png" alt>
+            <img class="halves" src="./images/circle1.png" alt>
+        </div>        </div>
+    </div>
+    <script>
+        function fadeIn(element) {
+            element.style.opacity = 1;   
+        }
+        function fadeOut(element) {
+            element.style.opacity = 0;   
+        }
+        
+        window.onload = function() {
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+    //        p1.style.display='none';
+      //      p2.style.display='none';
+            var d = 3;
+            setInterval(function() {
+                switch(d) {
+                    case 1:
+                        fadeOut(p1);
+                        fadeIn(p2);
+                        break;
+                    case 2:
+                        fadeOut(p2);
+                        fadeIn(p3);
+                        break;
+                    default:
+                        fadeOut(p3);
+                        fadeIn(p1);
+                        break;
+                }
+                d++;
+                if (d>3) d=1;
+            }, 5000);        
+        };
+    </script>
+</body>
+</html>

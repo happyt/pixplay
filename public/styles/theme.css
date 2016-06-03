@@ -1,0 +1,46 @@
+    html, body {
+        background-color: black;
+        height: 100vh;
+    }
+    .fillscreen {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        border: 1px solid green;
+        -webkit-transition: opacity 200 linear; 
+        -moz-transition: opacity 200 linear; 
+        transition: opacity 200 linear; 
+        opacity: 1;
+    }     
+    div {
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    padding: 0px;
+}
+.top-row {
+    border: 1px solid goldenrod;
+    display: flex;
+    flex: 1 1 0%;
+    flex-wrap: nowrap;
+}
+.lower-row {
+        border: 1px solid blue;
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 1 1 0%;
+    }    
+    img {
+    border: 1px solid red;
+    object-fit: cover;
+}
+.thirds {
+    height: 39vh;
+    width: 33vw;
+}
+
+.halves {
+    height: 59vh;
+    width: 49vw;
+}
