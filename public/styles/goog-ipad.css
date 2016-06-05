@@ -1,0 +1,62 @@
+div {
+display: block;
+}
+.shopping-carousel-container {
+overflow: hidden;
+white-space: nowrap;
+}
+.shopping-carousel {
+position: relative;
+}
+.pla-unit-container {
+line-height: 14px;
+margin: 10px 0 3px;
+display: inline-block;
+font-size: 12px;
+vertical-align: top;
+width: 50%;
+}
+.pla-unit-container {
+width: 130px;
+border: 2px solid red;
+}
+.pla-unit {
+border-left: 1px solid #DEDEDE;
+padding-left: 8px;
+padding-right: 8px;
+}
+.pla-unit-title {
+padding-top: 7px;
+height: 14px;
+white-space: normal;
+}
+.pla-unit-container a {
+text-decoration: none;
+}
+._Port {
+display: inline-block;
+text-align: center;
+width: 40px;
+height: 60px;
+}
+._qYc {
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+._EPg {
+color: #222;
+display: inline-block;
+padding-left: 8px;
+vertical-align: bottom;
+}
+cite, cite a:link {
+color: #006621;
+font-style: normal;
+}
+cite {
+word-wrap: break-word;
+}
+i, cite, em, var, address {
+font-style: italic;
+}

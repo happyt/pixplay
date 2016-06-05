@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .topbar {
+            width: 100pc;
+        }     
+        ul {
+            border: 1px solid #e7e7e7;
+            background-color: #f3f3f3;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }    
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }      
+        li:last-child {
+            border-right: none;
+        }
+        li a {
+            display: block;
+            color: #040;
+            text-align: center;
+            padding: 6px 18px;
+            text-decoration: none;
+        }        
+        li a:hover {
+            background-color: #1C6F50;
+            color: white;
+        }     
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }     
+        
+        .playlistrow {
+            border: 3px solid goldenrod;
+            background-color: #999;
+            width: 100pc;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex: 1 -1 0%;
+            flex-wrap: nowrap;
+        }
+        .middlerow {
+            border: 3px solid lightgreen;
+            background-color: #ffd;
+            width: 100pc;
+            display: flex;
+            flex: 1 -1 0%;
+            height: 40vh;
+        }
+           
+        .imagefilters, .properties {
+            border: 2px solid green;
+            background-color: #eff;
+            width: 30vw;
+        }
+
+        .postcard {
+            border: 2px solid dodgerblue;
+            height: 20vh;
+        }
+        
+        .currentpostcard {
+            border: 2px solid darkviolet;
+            width: 30vw;
+            object-fit: cover;
+         }
+        
+        .lowerrow {
+            border: 3px solid orangered;
+            background-color: #faa;
+            width: 100pc;
+            height: auto;
+            display: flex;
+            flex: 1 -1 0%;
+            
+        }
+        .database-images {
+            list-style: none;
+            overflow-x: scroll;
+            width: 100pc;
+        }
+        
+        .database-images li img {
+            background-color: #f3efea;
+            margin-right: 2px;
+            width: 100px;
+            height: 100px;
+            overflow-x: scroll;
+            float: left;
+            object-fit: contain;
+        }
+        
+        .browsed {
+            border: 1px solid grey;
+            object-fit: fill;   
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="topbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a class="active" href="#">Playlist</a></li>
+        <li><a href="#">Library</a></li>
+    </ul>
+
+    <div class="playlistrow">
+        <div>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+            <img class="postcard" src="./images/portrait1.jpg" alt>
+        </div>
+    </div>
+    <div class="middlerow">
+        <div class="imagefilters">
+            <h4>Account</h4>
+            <div>User: xxx</div>
+            <div>Customer: yyyy</div>
+            <div>Brand: Blue Peter</div>
+            <div>Status: Live</div>
+            <div>.</div>
+            <div>.</div>
+            <div>.</div>
+            <div>Media selection: Portrait</div>
+        </div>
+        <img class="currentpostcard" src="./images/template1.png" alt>
+        <div class="properties">
+            <h4>Playlist</h4>
+            <div>Title: Sunday promotion</div>
+            <div>Styles: Prima</div>
+            <div>Last: 1 June 2016 : Added football scores</div>
+            <div></div>
+            <div>.</div>
+            <div>Notes:</div>
+            <div>Add holiday pics</div>
+            <div class="options">
+                <button id="savePic">NEW</button>            
+                <button id="savePic">DELETE</button>            
+                <button id="savePic">SAVE</button>            
+            </div>
+        </div>
+           </div>
+        
+    <div class="lowerrow">
+        <div>
+            <ul class="database-images">
+                <li><img class="browsed" src="./images/circle1.png"></l>
+                <li><img class="browsed" src="./images/1.jpg"></l>
+                <li><img class="browsed" src="./images/squares1.png"></l>
+                <li><img class="browsed" src="./images/BeachFamilyWide.png"></l>
+                <li><img class="browsed" src="http://dreamatico.com/data_images/holiday/holiday-6.jpg"></l>
+                <li><img class="browsed" src="http://dreamatico.com/data_images/holiday/holiday-7.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        console.log("start...")
+        window.onload = function() {
+            console.log("loaded...")
+            var myButton = document.getElementById("savePic")
+            myButton.addEventListener("click", function() { 
+                alert("OK");
+                html2canvas($("#widget"), {
+                    onrendered: function(canvas) {
+                        theCanvas = canvas;
+                        
+                        document.body.appendChild(canvas);
+
+                        // Convert and download as image 
+                        Canvas2Image.saveAsPNG(canvas); 
+                        //$("#img-out").append(canvas);
+                        // Clean up 
+                        //document.body.removeChild(canvas);
+                    }
+                });
+            });
+            console.log("next...")
+        };
+        
+        (function() { 
+            console.log("setup");
+        }); 
+    </script>
+</body>
+
+</html>
