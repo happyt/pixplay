@@ -1,10 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        #demo {
+            width: 692px;
+            height: 60px;
+            background-color: #333;
+            padding: 8px;
+        }
+        
+        #logo,#half1 {
+            width: 60px;
+            height: 60px;
+            background: url(img/logo_black.jpg) no-repeat;
+        }
+        
+        .box {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            float: left;
+        }        
+        #red {
+            background-color: red;
+        }
+        #yellow {
+            background-color: yellow;
+        }        
+        #green {
+            background-color: green;
+        }        
+        #blue {
+            background-color: blue;
+        }        
+        #pink {
+            background-color: pink;
+        }
+        #purple {
+            background-color: purple;
+        }
+    </style>
+
 </head>
+
 <body>
-    Hello to this DEMO page
+    <div>
+        Hello to this DEMO page
+    </div>
+    <div>
+        <div id="demo">
+            <div class="box" id="red"></div>
+            <div class="box" id="yellow"></div>
+            <div class="box" id="green"></div>
+            <div class="box" id="blue"></div>
+            <div class="box" id="pink"></div>
+            <div class="box" id="purple"></div>
+        </div>
+        <div class="lower-row">
+            <img id="half1" src="./images/circle4.png" />
+            <img class="half2" src="./images/circle1.png" />
+        </div>
+    </div>
+    <script src="scripts/TweenMax.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>
