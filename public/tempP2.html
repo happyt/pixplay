@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
 
     <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+    
     <style>
         html {
             background: mediumseagreen;
-            font-family: sans-serif;
+            font-family: 'Candal', sans-serif;
             font-size: 14px;
+        }
+        
+      body {
+        font-size: 48px;
+      }
+        
+        div {
+            font-size: 40;
         }
         
         a {
@@ -114,9 +124,8 @@
             position: relative;
             top: 0px;
             left: 0px;
-            font-size: 40px;
+            font-size: 60px;
             color: darkblue;
-            
         }
     </style>
 
@@ -151,7 +160,16 @@
             <a class="article first-article">
                 <figure class="article-image">
                     <img src="images/BeachFamilyWide.png">
-                    <div id="crazy" class="bigOne">
+                    <div id="crazy1" class="bigOne">
+                        SUPER TEXT
+                    </div>
+                    <div id="crazy2" class="bigOne">
+                        SUPER TEXT
+                    </div>
+                    <div id="crazy3" class="bigOne">
+                        SUPER TEXT
+                    </div>
+                    <div id="crazy4" class="bigOne">
                         SUPER TEXT
                     </div>
                 </figure>
@@ -167,8 +185,8 @@
 
         function init() {
             var tt = new TimelineMax();
-            var duration = 2.0;
-            tt.to('#crazy', duration, {x:200, y:-300});
+            var duration = 1.0;
+            tt.staggerTo('.bigOne', duration, {x:170, y:-400, textShadow:"2px 2px 5px rgba(255, 255, 255, 1.0)"}, 0.2);
         }
     </script>
 </body>
