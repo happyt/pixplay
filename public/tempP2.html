@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+        html {
+            background: mediumseagreen;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        div,
+        h2,
+        p,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            overflow: hidden;
+            height: 98vh;
+        }
+        
+        .columns {
+            display: flex;
+        }
+        
+        .column {
+            background: #eee;
+            border: 2px solid darkred;
+            flex: 1;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .main-column {
+            flex: 4;
+        }
+        
+        .article {
+            background: white;
+            border: 2px solid darkblue;
+            color: #666;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            flex-basis: auto;
+            margin: 0px;
+        }
+        
+        .article-body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+        
+        .article-content {
+            flex: 1;
+            border: 3px red;
+        }
+        
+        .article-image {
+            background: #eee;
+            display: block;
+            padding-top: 75%;
+            position: relative;
+            width: 100%;
+        }
+        
+        .article-image img {
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .article-image.is-3by2 {
+            padding-top: 66.6666%;
+        }
+        
+        .article-image.is-16by9 {
+            padding-top: 56.25%;
+        }
+        
+        .article-body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 20px;
+        }
+        
+        .article-title {
+            color: #333;
+            flex-shrink: 0;
+            font-size: 1.4em;
+            font-weight: bold;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .bigOne {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            font-size: 40px;
+            color: darkblue;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="columns">
+        <div class="column">
+            <article class="article">
+                <figure class="article-image">
+                    <img src="images/BeachHutsWide.png">
+                </figure>
+            </article>
+            <article class="article">
+                <figure class="article-image">
+                    <img src="images/SunglassesInSandWide.png">
+                </figure>
+            </article>
+            <article class="article">
+                <figure class="article-image">
+                    <img src="images/BeachUmbrella.png">
+                </figure>
+            </article>
+            <article class="article">
+                <figure class="article-image">
+                    <img src="images/SandDuneWide.png">
+                </figure>
+            </article>
+        </div>
+        <div class="column  main-column">
+            <a class="article first-article">
+                <figure class="article-image">
+                    <img src="images/BeachFamilyWide.png">
+                    <div id="crazy" class="bigOne">
+                        SUPER TEXT
+                    </div>
+                </figure>
+
+            </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    <script>
+        window.onload = function() {
+            init();
+        };
+
+        function init() {
+            var tt = new TimelineMax();
+            var duration = 2.0;
+            tt.to('#crazy', duration, {x:200, y:-300});
+        }
+    </script>
+</body>
+
+</html>
