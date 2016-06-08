@@ -44,13 +44,12 @@
         }
         
         .column {
-            background: #eee;
+            background: #090;
             border: 2px solid darkred;
             flex: 1;
             padding: 2px;
             display: flex;
             flex-direction: column;
-            align-items: stretch;
         }
         
         .main-column {
@@ -142,7 +141,6 @@
                 <figure class="article-image">
                     <img src="images/BeachHutsWide.png">
                 </figure>
-                <div class="article-title">SUNNY</div>
             </article>
             <article class="article">
                 <figure class="article-image">
@@ -152,6 +150,17 @@
             <article class="article">
                 <figure class="article-image">
                     <img src="images/BeachUmbrella.png">
+                </figure>
+
+            </article>
+            <article class="article">
+                <figure class="article-image">
+                    <img src="images/SandDuneWide.png">
+                </figure>
+            </article>
+            <article class="article">
+                <figure class="article-image">
+                    <img src="images/SandDuneWide.png">
                 </figure>
             </article>
             <article class="article">
@@ -165,16 +174,16 @@
                 <figure class="article-image">
                     <img src="images/BeachFamilyWide.png">
                     <div id="crazy1" class="bigOne">
-                        SUPER TEXT
+                        HAVING A
                     </div>
                     <div id="crazy2" class="bigOne">
-                        SUPER TEXT
+                        HOLIDAY
                     </div>
                     <div id="crazy3" class="bigOne">
-                        SUPER TEXT
+                        WITH THE
                     </div>
                     <div id="crazy4" class="bigOne">
-                        SUPER TEXT
+                        FAMILY
                     </div>
                 </figure>
 
@@ -190,7 +199,7 @@
         function init() {
             var tt = new TimelineMax();
             var duration = 1.0;
-            tt.staggerTo('.bigOne', duration, {x:170, y:-400, textShadow:"2px 2px 5px rgba(255, 255, 255, 1.0)"}, 0.2);
+            tt.staggerTo('.bigOne', duration, {x:120, y:-600, textShadow:"2px 2px 5px rgba(255, 255, 255, 1.0)"}, 0.2);
         }
     </script>
 </body>
